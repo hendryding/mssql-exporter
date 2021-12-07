@@ -1,0 +1,38 @@
+{
+    "name": "mssql-exporter",
+    "version": "0.0.1",
+    "main": "index.js",
+    "private": false,
+    "keywords": [
+        "prometheus",
+        "mssql",
+        "exporter",
+        "metrics"
+    ],
+    "author": {
+        "name": "Hendry Ding",
+        "email": "hendryding@alphanetworks.global"
+    },
+    "license": "MIT",
+    "readmeFilename": "README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hendryding/mssql-exporter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/hendryding/mssql-exporter/issues"
+    },
+    "scripts": {
+        "docker:build": "docker build --rm -t hendryding/mssql-exporter:v${npm_package_version} .",
+        "docker:push": "docker push hendryding/mssql-exporter:v${npm_package_version}"
+    },
+    "dependencies": {
+        "debug": "^2.6.8",
+        "express": "^4.17.1",
+        "prom-client": "9.1.1",
+        "tedious": "^11.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
